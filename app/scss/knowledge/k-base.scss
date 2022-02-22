@@ -1,0 +1,84 @@
+.knowledge {
+  .h2 {
+    margin-bottom: 54px;
+  }
+
+  .body1{
+    color: $dark_green;
+    margin-bottom: 26px;
+  }
+}
+
+.knowledge-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(1px, 1fr));
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.knowledge-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  border-radius: 20px;
+  padding: 40px;
+  background-color: $pale_green;
+  transition: all 0.3s;
+  grid-column: span 2;
+  min-height: 200px;
+
+  &:not(.lg):hover {
+    background-image: none;
+    background-color: #FFF2E7;
+  }
+
+  &.lg {
+    grid-column: span 3;
+    min-height: 280px;
+    padding-right: 205px;
+  }
+
+  &:hover {
+    filter: drop-shadow(16px 40px 50px rgba(130, 101, 89, 0.18));
+    background-image: linear-gradient(259.03deg, #FFF2E7 26.2%, #FCCBAF 100%);;
+  }
+
+  .link {
+    margin-top: auto;
+  }
+
+  .bordered {
+    margin-right: 8px;
+  }
+}
+
+.knowledge-card__decor {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.knowledge-card__wave-line {
+  position: absolute;
+  top: 45px;
+  right: 25px;
+}
+
+.knowledge-card__ribbon {
+  position: absolute;
+  bottom: 44px;
+  right: 56px;
+}
+
+.knowledge--relative{
+  position: relative;
+}
+
+.knowledge__decor{
+  position: absolute;
+  bottom: 70px;
+  right: 25%;
+  transform: translateX(50%);
+}

@@ -1,5 +1,4 @@
 .doctors {
-  padding: 100px 0;
   background-color: #FFF2E7;
 }
 
@@ -34,7 +33,7 @@
     left: 0;
   }
 
-  .swiper-button-next{
+  .swiper-button-next {
     right: 0;
   }
 
@@ -112,13 +111,5 @@
 
   .bordered::after {
     bottom: 0;
-  }
-}
-
-.doctors-info {
-  text-align: center;
-
-  .body1 {
-    margin-bottom: 26px;
   }
 }
