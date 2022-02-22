@@ -13,8 +13,33 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-input{
-  border: 0;
+input {
+  border: 1px solid transparent;
+  outline: 0;
+
+  &:active, &:focus {
+    border-color: rgba(72, 98, 96, 0.43);
+  }
+
+  &.error {
+    color: #EB5757;
+    border-color: #FBA0AB;
+  }
+}
+
+.error-message {
+  color: #EB5757;
+  display: block;
+  text-align: left;
+  margin-top: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0, 3s;
+
+  .error {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 body {
@@ -82,3 +107,4 @@ body {
 @import './doctors/doctors';
 @import './knowledge/k-base';
 @import './members/members';
+@import './footer/footer';

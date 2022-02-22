@@ -1,0 +1,30 @@
+.footer {
+  border-top: 1px solid #28363538;
+  padding: 36px 36px 60px 36px;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-menu {
+  display: flex;
+  align-items: center;
+  column-gap: 36px;
+
+  a {
+    font-size: 14px;
+    color: $dark_green;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+
+.copy{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: $dark_green;
+}
