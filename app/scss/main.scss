@@ -13,6 +13,10 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+input{
+  border: 0;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -77,3 +81,4 @@ body {
 @import './header/header';
 @import './doctors/doctors';
 @import './knowledge/k-base';
+@import './members/members';
