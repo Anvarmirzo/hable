@@ -1,0 +1,42 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 36px 17px;
+  border-bottom: 1px solid #28363538;
+}
+
+.main-nav-menu {
+  display: flex;
+  align-self: flex-end;
+  column-gap: 42px;
+  color: $dark_green;
+  margin-bottom: -17px;
+
+  a {
+    height: 53px;
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      height: 4px;
+      background-color: transparent;
+      transition: all 0.3s;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      border-radius: 4px 4px 0 0;
+    }
+
+    &:hover, &.active{
+      &::after{
+        background-color: $green_black;
+      }
+    }
+  }
+}
+
+.get-support{}
