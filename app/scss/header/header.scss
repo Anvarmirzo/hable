@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 81px;
-  background-image: url('../img/bg/hero-bg.svg');
+  background-image: url('../img/bg/hero-bg.svg'), linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 38.16%), linear-gradient(255.72deg, rgba(118, 221, 190, 0.2) -0.83%, rgba(199, 241, 221, 0.2) 36.06%, rgba(242, 254, 99, 0.2) 86.93%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -14,6 +14,7 @@
 .hero {
   max-width: 771px;
   text-align: center;
+  margin-bottom: 58px;
 
   .h1 {
     margin-bottom: 13px;
@@ -21,5 +22,42 @@
 
   .body1 {
     margin-bottom: 48px;
+  }
+}
+
+.header-people {
+  position: relative;
+}
+
+.header-people__decor {
+  position: absolute;
+
+  &:first-child {
+    top: -74px;
+    left: 95px;
+  }
+
+  &:nth-child(2) {
+    top: -100px;
+    right: 30px;
+  }
+
+}
+
+.header-center-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 562px;
+  row-gap: 12px;
+
+  .btn {
+    margin-top: 36px;
+    width: max-content;
   }
 }

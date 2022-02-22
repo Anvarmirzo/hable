@@ -34,9 +34,9 @@ input {
   margin-top: 16px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0, 3s;
+  transition: opacity 0.3s;
 
-  .error {
+  &.active {
     opacity: 1;
     visibility: visible;
   }
@@ -108,3 +108,4 @@ body {
 @import './knowledge/k-base';
 @import './members/members';
 @import './footer/footer';
+@import './modal/modal';
