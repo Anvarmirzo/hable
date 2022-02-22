@@ -4,7 +4,6 @@
 @import 'typography';
 @import 'buttons';
 @import 'links';
-@import './nav/nav';
 
 input,
 textarea,
@@ -21,3 +20,6 @@ body {
 * {
   box-sizing: border-box;
 }
+
+@import './nav/nav';
+@import './header/header';

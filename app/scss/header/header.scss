@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 81px;
+  background-image: url('../img/bg/hero-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 680px;
+}
+
+.hero {
+  max-width: 771px;
+  text-align: center;
+
+  .h1 {
+    margin-bottom: 13px;
+  }
+
+  .body1 {
+    margin-bottom: 48px;
+  }
+}
