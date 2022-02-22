@@ -25,19 +25,19 @@ function html() {
     .pipe(cachebust({
       type: 'timestamp'
     }))
-    .pipe(dest(buildFolder))
+    .pipe(dest(buildFolder));
 };
 
 function bem() {
   return src([sourceFolder + '/html/**.html'])
     .pipe(gulpHtmlBemValidator())
-    .pipe(dest(buildFolder))
+    .pipe(dest(buildFolder));
 };
 
 function svg() {
   return src([sourceFolder + '/img/**/*.svg'])
     .pipe(svgmin())
-    .pipe(dest(buildFolder + '/img'))
+    .pipe(dest(buildFolder + '/img'));
 };
 
 function sprite() {
@@ -46,8 +46,8 @@ function sprite() {
       inlineSvg: true
     }))
 
-    .pipe(rename("sprite.svg"))
-    .pipe(dest(buildFolder + '/img/icons'))
+    .pipe(rename('sprite.svg'))
+    .pipe(dest(buildFolder + '/img/icons'));
 };
 
 function scss() {
@@ -55,7 +55,7 @@ function scss() {
     .pipe(sass())
     .pipe(cleanCSS({level: 2}))
     .pipe(dest(buildFolder + '/css'))
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass().on('error', sass.logError));
 };
 
 
@@ -64,7 +64,7 @@ function js() {
     .pipe(webpackStream({
       mode: 'none',
       output: {
-        filename: 'main.js',
+        filename: 'main.js'
       },
       module: {
         rules: [
@@ -75,7 +75,7 @@ function js() {
               loader: 'babel-loader',
               options: {
                 presets: [
-                  ['@babel/preset-env', {targets: "defaults"}]
+                  ['@babel/preset-env', {targets: 'defaults'}]
                 ]
               }
             }
@@ -85,13 +85,13 @@ function js() {
     }))
 
     .pipe(uglify())
-    .pipe(dest(buildFolder + '/js'))
+    .pipe(dest(buildFolder + '/js'));
 };
 
 function img() {
   return src([
-    sourceFolder + "/img/**/*.jpg",
-    sourceFolder + "/img/**/*.png"
+    sourceFolder + '/img/**/*.jpg',
+    sourceFolder + '/img/**/*.png'
   ])
     .pipe(
       squoosh(() => ({
@@ -99,19 +99,19 @@ function img() {
           mozjpeg: {},
           webp: {},
           avif: {}
-        },
+        }
       }))
     )
-    .pipe(dest(buildFolder + "/img"));
+    .pipe(dest(buildFolder + '/img'));
 };
 
 function fonts() {
   return src(sourceFolder + '/fonts/**/*')
-    .pipe(dest(buildFolder + '/fonts'))
+    .pipe(dest(buildFolder + '/fonts'));
 };
 
 function clear() {
-  return del(buildFolder)
+  return del(buildFolder);
 };
 
 function serve() {
@@ -124,13 +124,13 @@ function serve() {
     }
   });
 
-  watch(sourceFolder + '/html/**/*.html', series(html)).on('change', sync.reload)
-  watch(sourceFolder + '/scss/**/*.scss', series(scss, html)).on('change', sync.reload)
-  watch(sourceFolder + '/js/**/*.js', series(js)).on('change', sync.reload)
-  watch(sourceFolder + '/img/**/*', series(img)).on('change', sync.reload)
-  watch(sourceFolder + '/img/**/*', series(svg)).on('change', sync.reload)
-  watch(sourceFolder + '/img/icons/**/*', series(sprite)).on('change', sync.reload)
-  watch(sourceFolder + '/fonts/**/*', series(fonts)).on('change', sync.reload)
+  watch(sourceFolder + '/html/**/*.html', series(html)).on('change', sync.reload);
+  watch(sourceFolder + '/scss/**/*.scss', series(scss, html)).on('change', sync.reload);
+  watch(sourceFolder + '/js/**/*.js', series(js)).on('change', sync.reload);
+  watch(sourceFolder + '/img/**/*', series(img)).on('change', sync.reload);
+  watch(sourceFolder + '/img/**/*', series(svg)).on('change', sync.reload);
+  watch(sourceFolder + '/img/icons/**/*', series(sprite)).on('change', sync.reload);
+  watch(sourceFolder + '/fonts/**/*', series(fonts)).on('change', sync.reload);
 };
 
 

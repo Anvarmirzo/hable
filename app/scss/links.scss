@@ -1,16 +1,16 @@
 .link {
   color: inherit;
   text-decoration: none;
+
+  &:hover {
+    .bordered::after {
+      background-color: $green_black;
+    }
+  }
 }
 
 .bordered {
   position: relative;
-
-  &:hover {
-    &::after {
-      background-color: $green_black;
-    }
-  }
 
   &::after {
     position: absolute;

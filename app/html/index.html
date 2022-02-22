@@ -6,11 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hable</title>
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+  <!-- Main CSS -->
   <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
+@@include('./blocks/header.html')
+<main>
+  @@include('./blocks/doctors.html')
+</main>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Main JS -->
 <script src="./js/main.js"></script>
 </body>
-@@include('./blocks/header.html')
 </html>

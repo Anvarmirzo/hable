@@ -1,0 +1,124 @@
+.doctors {
+  padding: 100px 0;
+  background-color: #FFF2E7;
+}
+
+.doctors-swiper {
+  .swiper-wrapper {
+    padding: 60px 0 80px;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: $peach_accent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2L8 8L2 14' stroke='%23283635' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+
+    &::after {
+      content: '';
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.6;
+    }
+  }
+
+  .swiper-button-prev {
+    transform: rotate(180deg);
+    left: 0;
+  }
+
+  .swiper-button-next{
+    right: 0;
+  }
+
+  .swiper-controls {
+    position: absolute;
+    top: 24px;
+    right: 36px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 80px;
+    min-width: 80px;
+    justify-content: space-between;
+    column-gap: 10px;
+
+
+  }
+}
+
+.doctors-card {
+  display: block;
+  border-radius: 46px;
+  padding: 36px;
+  filter: drop-shadow(0px 29px 21px rgba(130, 101, 89, 0.1));
+  height: 305px;
+  background-color: #fff;
+  overflow: hidden;
+  transition: all 0.3s;
+
+  .body3 {
+    color: $dark_green;
+  }
+
+  &:hover {
+    background: linear-gradient(65.72deg, #FECD9E 40.6%, #FF8053 95.33%);
+    filter: drop-shadow(0px 30px 20px rgba(130, 101, 89, 0.34));
+  }
+}
+
+.doctor-card__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 80%;
+}
+
+.doctors-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 144px;
+  height: 100%;
+  margin-left: auto;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(255, 212, 163, 0.5);
+  border-radius: 22px;
+  padding: 8px;
+  color: $dark_green;
+  margin-bottom: 28px;
+}
+
+.doctors-card-content__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: auto;
+  font-weight: 500;
+  color: $green_black;
+
+  .bordered::after {
+    bottom: 0;
+  }
+}
+
+.doctors-info {
+  text-align: center;
+
+  .body1 {
+    margin-bottom: 26px;
+  }
+}
