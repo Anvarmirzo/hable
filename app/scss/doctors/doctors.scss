@@ -10,7 +10,7 @@
   .swiper-wrapper {
     padding: 60px 0 80px;
 
-    @include block_768 {
+    @include block_576{
       padding: 36px 0;
       row-gap: 10px;
       flex-wrap: wrap;
