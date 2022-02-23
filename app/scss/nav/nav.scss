@@ -13,6 +13,14 @@
   }
 }
 
+.main-nav__logo {
+  @include block_768 {
+    svg {
+      width: 96px;
+    }
+  }
+}
+
 
 .burger-bar {
   transition: all 0.3s;
@@ -72,6 +80,10 @@
   border-bottom: 1px solid #28363538;
   width: 100%;
   z-index: 2;
+  @include block_768 {
+    height: 61px;
+    padding: 12px 16px;
+  }
 }
 
 .main-nav-menu {
@@ -81,7 +93,7 @@
   color: $dark_green;
   margin-bottom: -17px;
 
-  @include block_1200{
+  @include block_1200 {
     column-gap: 20px;
   }
 
@@ -114,9 +126,13 @@
         content: '';
         height: 1px;
         width: 100%;
+
+        @include block_768 {
+          top: 60px;
+        }
       }
 
-      &::after{
+      &::after {
         content: '';
         position: absolute;
         top: 0;

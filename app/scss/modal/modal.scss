@@ -9,6 +9,11 @@
     background-color: rgba(0, 0, 0, 0);
     z-index: -1;
     transition: background-color 0.3s;
+
+    @include block_768 {
+      background: linear-gradient(265.23deg, #7CFABD 4.6%, #95F3AA 42.24%, #BBE98E 97.75%), #FFFFFF;
+      box-shadow: 0 44px 60px rgba(115, 148, 144, 0.15);
+    }
   }
 
   &.active {
@@ -16,9 +21,18 @@
       background-color: rgba(0, 0, 0, 0.7);
       z-index: 2;
     }
-    .modal{
+
+    .modal {
       opacity: 1;
       visibility: visible;
+    }
+
+    .modal-header {
+      @include block_768 {
+        opacity: 1;
+        visibility: visible;
+        border-bottom: 1px solid #28363538;
+      }
     }
   }
 }
@@ -40,11 +54,26 @@
   visibility: hidden;
   transition: opacity 0.3s;
 
+  @include block_768 {
+    background-color: transparent;
+    box-shadow: none;
+    min-width: 0;
+    width: 100%;
+  }
+
+  @include block_576 {
+    padding: 16px;
+  }
+
   .close {
     position: absolute;
     right: 32px;
     top: 32px;
     border-radius: 50%;
+
+    @include block_768 {
+      display: none;
+    }
   }
 
   .h2 {
@@ -71,6 +100,17 @@
 .modal-control {
   display: flex;
   justify-content: center;
+
+  @include block_768 {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    background-color: $green_black;
+    background-image: none;
+    color: $pale_green;
+  }
 }
 
 .modal__input {
@@ -81,4 +121,59 @@
   margin-right: -129px;
   height: 72px;
   min-width: 450px;
+  font-weight: 500;
+
+  @include block_768 {
+    min-width: 0;
+    margin-right: 0;
+    padding: 24px;
+    width: 100%;
+  }
+}
+
+.modal-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  padding: 18px 16px;
+  height: 61px;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .close {
+    background-color: transparent;
+
+    svg {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+.desktop-envelope {
+  display: inline-block;
+  @include block_768 {
+    display: none;
+  }
+}
+
+.mobile-envelope {
+  display: none;
+  @include block_768 {
+    display: inline-block;
+  }
+}
+
+.step-2 {
+  @include block_768 {
+    .btn {
+      margin-top: 41px;
+      width: 100%;
+    }
+  }
 }

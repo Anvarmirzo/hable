@@ -12,13 +12,13 @@
     href="https://unpkg.com/swiper/swiper-bundle.min.css"
   />
   <!-- Main CSS -->
-  <link rel="stylesheet" href="./css/main.css?t=1645595079094">
+  <link rel="stylesheet" href="./css/main.css?t=1645597594477">
 </head>
 
 <body>
 <header class="header">
   <nav class="main-nav">
-  <a href="#">
+  <a href="#" class="main-nav__logo">
     <svg width="144" height="36" viewBox="0 0 144 36" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd"
             d="M29.874 19.0467C28.7121 19.4784 27.455 19.7143 26.1428 19.7143C20.2255 19.7143 15.4285 14.9174 15.4285 9.00003C15.4285 7.96722 15.5746 6.96853 15.8474 6.02353C15.5669 6.00791 15.2844 6 15 6C6.71573 6 0 12.7157 0 21C0 29.2843 6.71573 36 15 36C23.2843 36 30 29.2843 30 21C30 20.338 29.9571 19.6861 29.874 19.0467Z"
@@ -544,10 +544,74 @@
     <span class="copy">&copy; 2022 Hable. All rights reserved</span>
   </nav>
 </footer>
+<div class="modal-wrapper" id="modal">
+  <div class="modal-header">
+    <a href="#">
+      <svg width="96" height="24" viewBox="0 0 96 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M19.916 12.6978C19.1414 12.9856 18.3033 13.1429 17.4285 13.1429C13.4836 13.1429 10.2857 9.94491 10.2857 6.00002C10.2857 5.31148 10.3831 4.64569 10.5649 4.01569C10.3779 4.00528 10.1896 4 10 4C4.47715 4 0 8.47715 0 14C0 19.5228 4.47715 24 10 24C15.5228 24 20 19.5228 20 14C20 13.5587 19.9714 13.124 19.916 12.6978Z"
+              fill="#283635"/>
+        <ellipse cx="17.6667" cy="5.66667" rx="5.66667" ry="5.66667" fill="white"/>
+        <path
+          d="M31.7467 3.59735H35.9707V10.9894C36.4827 10.4774 37.0667 10.0934 37.7227 9.83735C38.3947 9.58135 39.0987 9.45335 39.8347 9.45335C41.4507 9.45335 42.6427 9.87735 43.4107 10.7254C44.1947 11.5574 44.5867 12.6934 44.5867 14.1334V21.3334H40.3627V14.6854C40.3627 13.3894 39.7707 12.7414 38.5867 12.7414C38.0427 12.7414 37.5467 12.8694 37.0987 13.1254C36.6507 13.3654 36.2747 13.7414 35.9707 14.2534V21.3334H31.7467V3.59735Z"
+          fill="#283635"/>
+        <path
+          d="M50.622 21.6934C49.182 21.6934 48.014 21.3494 47.118 20.6614C46.238 19.9574 45.798 18.9814 45.798 17.7334C45.798 16.4374 46.222 15.4454 47.07 14.7574C47.934 14.0534 49.166 13.7014 50.766 13.7014C51.39 13.7014 52.014 13.7734 52.638 13.9174C53.262 14.0454 53.798 14.2214 54.246 14.4454V14.2054C54.246 12.9734 53.238 12.3574 51.222 12.3574C49.814 12.3574 48.526 12.6294 47.358 13.1734V10.2694C47.87 10.0294 48.542 9.83735 49.374 9.69335C50.206 9.53335 51.07 9.45335 51.966 9.45335C54.11 9.45335 55.726 9.88535 56.814 10.7494C57.918 11.5974 58.47 12.7894 58.47 14.3254V21.3334H54.51V20.3494C54.078 20.7654 53.534 21.0934 52.878 21.3334C52.222 21.5734 51.47 21.6934 50.622 21.6934ZM51.87 19.1014C52.366 19.1014 52.83 19.0054 53.262 18.8134C53.694 18.6054 54.022 18.3414 54.246 18.0214V17.0134C53.558 16.5494 52.774 16.3174 51.894 16.3174C51.334 16.3174 50.902 16.4374 50.598 16.6774C50.294 16.9174 50.142 17.2694 50.142 17.7334C50.142 18.1654 50.286 18.5014 50.574 18.7414C50.878 18.9814 51.31 19.1014 51.87 19.1014Z"
+          fill="#283635"/>
+        <path
+          d="M68.6645 21.6934C67.0165 21.6934 65.6565 21.1894 64.5845 20.1814V21.3334H60.5045V3.59735H64.7285V10.7494C65.1925 10.3494 65.7685 10.0374 66.4565 9.81335C67.1605 9.57335 67.8965 9.45335 68.6645 9.45335C69.8805 9.45335 70.9445 9.70935 71.8565 10.2214C72.7845 10.7334 73.5045 11.4614 74.0165 12.4054C74.5285 13.3334 74.7845 14.3974 74.7845 15.5974C74.7845 16.8134 74.5285 17.8854 74.0165 18.8134C73.5045 19.7254 72.7845 20.4374 71.8565 20.9494C70.9285 21.4454 69.8645 21.6934 68.6645 21.6934ZM67.5605 18.4294C68.4245 18.4294 69.1205 18.1814 69.6485 17.6854C70.1765 17.1734 70.4405 16.4774 70.4405 15.5974C70.4405 14.7174 70.1765 14.0214 69.6485 13.5094C69.1205 12.9974 68.4245 12.7414 67.5605 12.7414C66.9205 12.7414 66.3445 12.9094 65.8325 13.2454C65.3205 13.5654 64.9525 14.0054 64.7285 14.5654V16.6054C64.9525 17.1654 65.3205 17.6134 65.8325 17.9494C66.3445 18.2694 66.9205 18.4294 67.5605 18.4294Z"
+          fill="#283635"/>
+        <path d="M76.4655 3.59735H80.6895V21.3334H76.4655V3.59735Z" fill="#283635"/>
+        <path
+          d="M89.6085 21.6934C87.3525 21.6934 85.5765 21.1654 84.2805 20.1094C83.0005 19.0534 82.3605 17.5574 82.3605 15.6214C82.3605 13.7174 82.9285 12.2134 84.0645 11.1094C85.2165 10.0054 86.8725 9.45335 89.0325 9.45335C90.4085 9.45335 91.5845 9.71735 92.5605 10.2454C93.5525 10.7574 94.2965 11.4694 94.7925 12.3814C95.3045 13.2774 95.5605 14.2934 95.5605 15.4294V16.9894H86.3685C86.5285 17.6294 86.9285 18.0934 87.5685 18.3814C88.2085 18.6694 89.0805 18.8134 90.1845 18.8134C90.9365 18.8134 91.7045 18.7494 92.4885 18.6214C93.2885 18.4934 93.9765 18.3174 94.5525 18.0934V20.8774C93.9605 21.1174 93.2165 21.3094 92.3205 21.4534C91.4405 21.6134 90.5365 21.6934 89.6085 21.6934ZM91.5765 14.3494C91.5125 13.7254 91.2565 13.2374 90.8085 12.8854C90.3605 12.5334 89.7445 12.3574 88.9605 12.3574C88.1925 12.3574 87.5845 12.5414 87.1365 12.9094C86.6885 13.2614 86.4325 13.7414 86.3685 14.3494H91.5765Z"
+          fill="#283635"/>
+      </svg>
+    </a>
+    <button class="btn close js-modal-close" type="button">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.33325 1.33334L14.6666 14.6667" stroke="#486260" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"/>
+        <path d="M14.6665 1.33334L1.33317 14.6667" stroke="#486260" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
 
+  <form class="modal" id="modal-form">
+    <button class="btn close js-modal-close" type="button">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.33325 1.33334L14.6666 14.6667" stroke="#486260" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"/>
+        <path d="M14.6665 1.33334L1.33317 14.6667" stroke="#486260" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div class="step step-1 ">
+      <legend class="h2">Please Share Your Email.</legend>
+      <p class="modal__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames mattis sed risus risus
+        consequat sed nisi. Ultrices
+        egestas ut elementum tempor.</p>
+      <div class="modal-control">
+        <label>
+          <input class="modal__input" type="email" placeholder="Your Email Address">
+          <span class="error-message caption">Enter a valid mail type</span>
+        </label>
+        <button class="btn big gradient">Submit</button>
+      </div>
+    </div>
+    <div class="step step-2">
+      <span class="h2">Thank you!</span>
+      <p class="modal__desc">Your email address was successfuly sended. <br>
+        We will contact you as soon as possible.</p>
+      <img class="desktop-envelope" src="./img/cards/modal/envelope.svg" alt="">
+      <img class="mobile-envelope" src="./img/cards/modal/envelope-dark.svg" alt="">
+      <button class="btn big black mobile-envelope js-modal-close">Ok</button>
+    </div>
+  </form>
+</div>
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- Main JS -->
-<script src="./js/main.js?t=1645595079094"></script>
+<script src="./js/main.js?t=1645597594477"></script>
 </body>
 </html>
