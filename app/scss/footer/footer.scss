@@ -1,18 +1,32 @@
 .footer {
   border-top: 1px solid #28363538;
   padding: 36px 36px 60px 36px;
+
+  @include block_992 {
+    border-top: 0;
+    padding: 0 16px 32px;
+  }
 }
 
 .footer-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include block_480 {
+    flex-direction: column;
+    row-gap: 24px;
+  }
 }
 
 .footer-menu {
   display: flex;
   align-items: center;
   column-gap: 36px;
+
+  @include block_992 {
+    display: none;
+  }
 
   a {
     font-size: 14px;
@@ -22,9 +36,24 @@
   }
 }
 
-.copy{
+.copy {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.5;
   color: $dark_green;
+}
+
+.mobile-logo {
+  display: none;
+
+  @include block_992 {
+    display: inline-block;
+  }
+}
+
+.desktop-logo {
+  display: inline-block;
+  @include block_992 {
+    display: none;
+  }
 }

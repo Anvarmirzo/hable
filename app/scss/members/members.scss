@@ -1,6 +1,8 @@
 .members {
   background-image: linear-gradient(180deg, #EAF4F2 45.99%, #FFFFFF 100%);
-
+  @include block_768 {
+    padding-bottom: 60px;
+  }
   .h2 {
     margin-bottom: 96px;
     text-align: center;
