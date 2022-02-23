@@ -1,7 +1,7 @@
 import {swiperConfig} from './configs/swiper';
 import {memberForm} from './member/memberForm';
 import {modal} from './modal/modal';
-import {showNavMenu} from './nav/nav';
+import {showNavMenu, smoothScroll} from './nav/nav';
 
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
@@ -9,4 +9,5 @@ document.addEventListener('DOMContentLoaded', function () {
   modal();
   memberForm();
   showNavMenu();
+  smoothScroll()
 });

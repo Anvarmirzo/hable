@@ -3,23 +3,19 @@
   text-decoration: none;
 
   &:hover {
-    .bordered::after {
-      background-color: $green_black;
+    .link-animated {
+      margin-right: 14px;
+      color: $dark_green;
     }
   }
 }
 
-.bordered {
+.link-animated {
   position: relative;
+  transition: all 0.3s;
+  color: $green_black;
 
-  &::after {
-    position: absolute;
-    bottom: 4px;
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: transparent;
-    transition: background-color 0.3s;
+  svg {
+   color: $dark_green;
   }
 }
