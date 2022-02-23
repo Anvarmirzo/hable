@@ -4,6 +4,10 @@
   .h2 {
     margin-bottom: 96px;
     text-align: center;
+
+    @include block_768 {
+      margin-bottom: 36px;
+    }
   }
 }
 
@@ -12,6 +16,19 @@
   display: flex;
   flex-direction: column;
   row-gap: 91px;
+
+  @include block_1200 {
+    padding: 0 110px 80px;
+  }
+
+  @include block_992 {
+    padding: 0 0 80px;
+  }
+
+  @include block_768 {
+    row-gap: 36px;
+    padding-bottom: 60px;
+  }
 }
 
 .members-list-item {
@@ -19,6 +36,12 @@
   display: flex;
   column-gap: 25px;
   width: max-content;
+
+  @include block_768 {
+    flex-direction: column;
+    row-gap: 16px;
+    width: 100%;
+  }
 
   &:nth-child(even) {
     margin-left: auto;
@@ -29,6 +52,10 @@
   position: absolute;
   right: -25px;
   top: -20px;
+
+  @include block_768 {
+    display: none;
+  }
 }
 
 .members-list__img {
@@ -37,11 +64,19 @@
   &.sm {
     width: 80px;
     height: 80px;
+    @include block_768 {
+      width: 48px;
+      height: 48px;
+    }
   }
 
   &.lg {
     width: 140px;
     height: 140px;
+    @include block_768 {
+      width: 48px;
+      height: 48px;
+    }
   }
 }
 
@@ -51,6 +86,19 @@
 
   .body3 {
     margin-top: 16px;
+    @include block_768 {
+      margin-top: 0;
+    }
+  }
+}
+
+.join-container {
+  padding: 0 120px;
+  @include block_992 {
+    padding: 0 48px;
+  }
+  @include block_768 {
+    padding: 0;
   }
 }
 
@@ -68,8 +116,21 @@
   background-image: linear-gradient(265.23deg, #7CFABD 4.6%, #95F3AA 42.24%, #BBE98E 97.75%);
   border-radius: 60px;
 
+  @include block_992 {
+    padding: 48px;
+  }
+
+  @include block_768 {
+    padding: 48px 16px;
+  }
+
   .h1 {
     color: $green_black;
+    margin-bottom: 13px;
+
+    @include block_992 {
+      font-size: 36px;
+    }
   }
 
   .body1 {
@@ -82,6 +143,12 @@
   margin-top: 48px;
   color: #486260AD;
 
+  @include block_768 {
+    margin-top: 36px;
+    flex-direction: column;
+    width: 100%;
+  }
+
   input {
     height: 72px;
     background-color: #FFFFFF;
@@ -91,14 +158,50 @@
     padding: 24px 136px 24px 24px;
     min-width: 450px;
 
+    &::placeholder {
+      font-weight: 500;
+    }
+
+    @include block_768 {
+      font-size: 16px;
+      min-width: 0;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 6px;
+      padding: 21.5px 24px;
+    }
+
     &:active, &:focus {
       border-color: $dark_green;
     }
   }
 
-  .btn{
-    &:hover{
+  .btn {
+    &:hover {
       background: $dark_green;
     }
+  }
+}
+
+.mobile-stars {
+  display: none;
+  @include block_768 {
+    display: block;
+  }
+}
+
+.desktop-stars {
+  display: block;
+
+  @include custom-media(769px) {
+    display: none;
+  }
+}
+
+.members-list-item-head {
+  @include block_768 {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
   }
 }
