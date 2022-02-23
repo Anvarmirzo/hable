@@ -72,6 +72,11 @@ body {
   .body1 {
     margin-bottom: 26px;
   }
+  .btn{
+    @include  block_576{
+      width: 100%;
+    }
+  }
 }
 
 .container {
