@@ -81,6 +81,10 @@
   color: $dark_green;
   margin-bottom: -17px;
 
+  @include block_1200{
+    column-gap: 20px;
+  }
+
   @include block_992 {
     position: fixed;
     top: 0;

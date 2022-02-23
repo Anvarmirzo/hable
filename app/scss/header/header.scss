@@ -9,6 +9,10 @@
   background-position: center;
   background-size: cover;
   min-height: 680px;
+
+  @include block_992 {
+    padding: 160px 16px 0;
+  }
 }
 
 .hero {
@@ -16,17 +20,44 @@
   text-align: center;
   margin-bottom: 58px;
 
+  @include block_992 {
+    margin-bottom: 111px;
+  }
+
+  @include block_768 {
+    max-width: 100%;
+  }
+
   .h1 {
     margin-bottom: 13px;
+    font-size: 36px;
+    color: $green_black;
   }
 
   .body1 {
     margin-bottom: 48px;
+    color: $dark_green;
+
+    @include block_992 {
+      margin-bottom: 36px;
+    }
+  }
+
+  .btn {
+    @include block_576 {
+      width: 100%;
+    }
   }
 }
 
 .header-people {
   position: relative;
+
+  @include block_992 {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 60px;
+  }
 }
 
 .header-people__decor {
@@ -55,9 +86,41 @@
   align-items: center;
   max-width: 562px;
   row-gap: 12px;
+  color: $green_black;
+
+  @include block_1200 {
+    max-width: 450px;
+  }
+
+  @include block_992 {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
 
   .btn {
     margin-top: 36px;
     width: max-content;
+
+    @include block_576 {
+      width: 100%;
+      font-size: 24px;
+      font-weight: 600;
+      padding: 24px;
+      height: 72px;
+      border-radius: 24px;
+    }
   }
+
+  .body1 {
+    color: $dark_green;
+  }
+}
+
+.header-people__img {
+  max-width: 100%;
 }
