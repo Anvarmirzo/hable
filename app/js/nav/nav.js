@@ -49,3 +49,17 @@ export const smoothScroll = () => {
     });
   }
 };
+
+export const changeBgOnScroll = ()=>{
+  const navbar = document.querySelector('.main-nav');
+  window.addEventListener('scroll', function(e) {
+    const lastPosition = window.scrollY;
+    if (lastPosition > 50 ) {
+      navbar.classList.add('bg')
+    } else if (navbar.classList.contains('bg')) {
+      navbar.classList.remove('bg')
+    } else {
+      navbar.classList.remove('bg')
+    }
+  })
+}

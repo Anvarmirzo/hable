@@ -9,17 +9,17 @@
     background-color: rgba(0, 0, 0, 0);
     z-index: -1;
     transition: background-color 0.3s;
-
-    @include block_768 {
-      background: linear-gradient(265.23deg, #7CFABD 4.6%, #95F3AA 42.24%, #BBE98E 97.75%), #FFFFFF;
-      box-shadow: 0 44px 60px rgba(115, 148, 144, 0.15);
-    }
   }
 
   &.active {
     &::before {
       background-color: rgba(0, 0, 0, 0.7);
       z-index: 2;
+
+      @include block_768 {
+        background: linear-gradient(265.23deg, #7CFABD 4.6%, #95F3AA 42.24%, #BBE98E 97.75%), #FFFFFF;
+        box-shadow: 0 44px 60px rgba(115, 148, 144, 0.15);
+      }
     }
 
     .modal {

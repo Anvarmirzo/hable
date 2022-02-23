@@ -12,7 +12,7 @@
 
 
   @include block_992 {
-    padding: 160px 16px 60px;
+    padding: 160px 0 60px;
   }
 }
 
@@ -23,10 +23,13 @@
 
   @include block_992 {
     margin-bottom: 111px;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 
   @include block_768 {
     max-width: 100%;
+    margin-bottom: 54px;
   }
 
   .h1 {
@@ -53,17 +56,21 @@
 
 .header-people {
   position: relative;
+  padding: 0 93px;
 
   @include block_992 {
     display: flex;
     flex-direction: column-reverse;
-    row-gap: 60px;
+    padding: 0;
+    width: 100%;
   }
 }
 
 .header-people__decor {
   position: absolute;
-
+  @include block_992 {
+    display: none;
+  }
   &:first-child {
     top: -74px;
     left: 95px;
@@ -79,7 +86,7 @@
 .header-center-item {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 49%;
   transform: translate(-50%, -50%);
   text-align: center;
   display: flex;
@@ -88,9 +95,19 @@
   max-width: 562px;
   row-gap: 12px;
   color: $green_black;
+  margin: 38px 0 18px;
+
+  @include custom-media(1280px){
+    max-width: 450px;
+  }
 
   @include block_1200 {
-    max-width: 450px;
+    top: 45%;
+  }
+
+  @include custom-media(1080px){
+    top: 46%;
+    max-width: 410px;
   }
 
   @include block_992 {
@@ -98,6 +115,8 @@
     left: auto;
     top: auto;
     transform: none;
+    padding-right: 16px;
+    padding-left: 16px;
     max-width: 100%;
     width: 100%;
   }
@@ -124,4 +143,18 @@
 
 .header-people__img {
   max-width: 100%;
+}
+
+.desktop-hero {
+  display: inline-block;
+  @include block_992 {
+    display: none;
+  }
+}
+
+.mobile-hero {
+  display: none;
+  @include block_992 {
+    display: inline-block;
+  }
 }
