@@ -5,9 +5,10 @@ export const swiperConfig = () => {
       spaceBetween: 20,
       freeMode: true,
       loop: true,
-      speed: 600,
+      speed: 1000,
       autoplay: {
-        delay: 3000,
+      pauseOnMouseEnter: true,
+        delay: 5000,
         disableOnInteraction: false
       },
       navigation: {

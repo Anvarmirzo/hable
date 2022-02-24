@@ -33,6 +33,40 @@
     color: $dark_green;
     font-weight: 500;
     text-decoration: none;
+    position: relative;
+    padding-bottom: 15px;
+
+    &:hover {
+      color: #000;
+
+      &::after {
+        background-color: $green_black;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      height: 4px;
+      background-color: transparent;
+      transition: all 0.3s;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      border-radius: 4px 4px 0 0;
+
+      @include block_992 {
+        left: 0;
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+    }
   }
 }
 

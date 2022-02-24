@@ -165,6 +165,7 @@
     height: 53px;
     display: inline-block;
     position: relative;
+    transition: color 0.3s;
 
     @include block_992 {
       padding-left: 16px;
@@ -172,6 +173,18 @@
       font-weight: 600;
       font-size: 20px;
       z-index: 1;
+    }
+
+    &:hover {
+      color: #000;
+    }
+
+    &.active {
+      color: $green_black;
+
+      &::after {
+        background-color: $green_black;
+      }
     }
 
     &::after {
@@ -195,14 +208,6 @@
         width: 8px;
         height: 8px;
         border-radius: 50%;
-      }
-    }
-
-    &.active {
-      color: $green_black;
-
-      &::after {
-        background-color: $green_black;
       }
     }
   }

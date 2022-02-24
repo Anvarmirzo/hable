@@ -61,6 +61,8 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
 }
 
 * {

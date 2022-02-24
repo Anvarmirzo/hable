@@ -40,6 +40,11 @@ function svg() {
     .pipe(dest(buildFolder + '/img'));
 };
 
+function exceptions() {
+  return src([sourceFolder + '/img/**/*.ico'])
+    .pipe(dest(buildFolder + '/img'));
+}
+
 function sprite() {
   return src([sourceFolder + '/img/icons/**/*.svg'])
     .pipe(svgstore({
@@ -129,12 +134,13 @@ function serve() {
   watch(sourceFolder + '/js/**/*.js', series(js)).on('change', sync.reload);
   watch(sourceFolder + '/img/**/*', series(img)).on('change', sync.reload);
   watch(sourceFolder + '/img/**/*', series(svg)).on('change', sync.reload);
+  watch(sourceFolder + '/img/**/*', series(exceptions)).on('change', sync.reload);
   watch(sourceFolder + '/img/icons/**/*', series(sprite)).on('change', sync.reload);
   watch(sourceFolder + '/fonts/**/*', series(fonts)).on('change', sync.reload);
 };
 
 
-exports.build = series(clear, scss, js, img, sprite, fonts, html);
-exports.watch = series(clear, scss, js, img, svg, sprite, fonts, html, serve);
+exports.build = series(clear, scss, js, img, exceptions, sprite, fonts, html);
+exports.watch = series(clear, scss, js, img, svg, sprite, exceptions, fonts, html, serve);
 exports.bem = bem;
 exports.clear = clear;
