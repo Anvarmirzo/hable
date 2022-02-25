@@ -15,7 +15,7 @@ export const showNavMenu = () => {
 
 export const smoothScroll = () => {
   const links = document.querySelectorAll('.main-nav-menu a');
-  const nav = document.querySelector('.main-nav-menu')
+  const nav = document.querySelector('.main-nav-menu');
   const burger = document.getElementById('burger-btn');
 
   for (const link of links) {
@@ -50,16 +50,39 @@ export const smoothScroll = () => {
   }
 };
 
-export const changeBgOnScroll = ()=>{
+export const changeBgOnScroll = () => {
   const navbar = document.querySelector('.main-nav');
-  window.addEventListener('scroll', function(e) {
+  window.addEventListener('scroll', function (e) {
+    const sections = document.querySelectorAll('[data-id="point"]');
+    const links = navbar.querySelectorAll('.link');
+    window.onscroll = () => {
+      let current = '';
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (window.pageYOffset >= sectionTop - 60) {
+          current = section.getAttribute('id');
+        }
+      });
+
+
+      links.forEach((link) => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }else if(!current.length){
+          links[0].classList.add('active');
+        }
+      });
+    };
+
     const lastPosition = window.scrollY;
-    if (lastPosition > 50 ) {
-      navbar.classList.add('bg')
+    if (lastPosition > 50) {
+      navbar.classList.add('bg');
     } else if (navbar.classList.contains('bg')) {
-      navbar.classList.remove('bg')
+      navbar.classList.remove('bg');
     } else {
-      navbar.classList.remove('bg')
+      navbar.classList.remove('bg');
     }
-  })
-}
+  });
+};
