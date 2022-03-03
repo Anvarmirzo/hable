@@ -71,6 +71,10 @@ body {
 
 .section {
   padding: 100px 0;
+
+  @include block_576{
+    padding: 60px 0;
+  }
 }
 
 .section-bottom {

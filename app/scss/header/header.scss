@@ -4,19 +4,26 @@
   align-items: center;
   justify-content: center;
   padding-top: 245px;
-  background-image: url('../img/bg/hero-bg.svg'), linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 38.16%), linear-gradient(255.72deg, rgba(118, 221, 190, 0.2) -0.83%, rgba(199, 241, 221, 0.2) 36.06%, rgba(242, 254, 99, 0.2) 86.93%);
+  background-blend-mode: multiply;
+  background-image: url('../img/bg/hero-spots.jpg'), linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 38.16%), linear-gradient(255.72deg, rgba(118, 221, 190, 0.2) -0.83%, rgba(199, 241, 221, 0.2) 36.06%, rgba(242, 254, 99, 0.2) 86.93%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   min-height: 680px;
 
-
   @include block_992 {
     padding: 160px 0 60px;
+  }
+
+  @include block_576{
+    background-position: top center;
+    background-size: contain;
+    padding-bottom: 0;
   }
 }
 
 .hero {
+  position: relative;
   max-width: 771px;
   text-align: center;
   margin-bottom: 58px;
@@ -56,7 +63,7 @@
 
 .header-people {
   position: relative;
-  padding: 0 93px;
+  padding: 0 93px 100px;
 
   @include block_992 {
     display: flex;
@@ -71,6 +78,7 @@
   @include block_992 {
     display: none;
   }
+
   &:first-child {
     top: -74px;
     left: 95px;
@@ -85,7 +93,7 @@
 
 .header-center-item {
   position: absolute;
-  top: 50%;
+  top: 37%;
   left: 49%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -97,16 +105,16 @@
   color: $green_black;
   margin: 38px 0 18px;
 
-  @include custom-media(1280px){
+  @include custom-media(1280px) {
     max-width: 450px;
   }
 
   @include block_1200 {
-    top: 45%;
+    top: 37%;
   }
 
-  @include custom-media(1080px){
-    top: 46%;
+  @include custom-media(1080px) {
+    top: 36%;
     max-width: 410px;
   }
 

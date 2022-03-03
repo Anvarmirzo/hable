@@ -153,7 +153,10 @@
   font-weight: 500;
   color: $green_black;
 
-  .link-animated::after {
-    bottom: 0;
+  .link-animated{
+    margin-right: 8px;
+    &::after {
+      bottom: 0;
+    }
   }
 }
